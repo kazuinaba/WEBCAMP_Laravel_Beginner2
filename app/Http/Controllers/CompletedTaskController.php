@@ -40,7 +40,7 @@ class CompletedTaskController extends Controller
                  // 一覧の取得
        $list = CompletedTaskModel::get();
   $list = $this->getListBuilder()
-                     ->paginate(2);
+                     ->paginate(1);
   
 //$sql = TaskModel::toSql();
 //echo "<pre>\n"; var_dump($sql, $list); exit;
