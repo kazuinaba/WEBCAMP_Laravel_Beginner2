@@ -28,6 +28,7 @@ Route::post('/login', [AuthController::class, 'login']);
 
 // 会員登録（★これを追加）
 Route::get('/user/register', [UserController::class, 'index']);
+Route::post('/user/register', [UserController::class, 'register']);
 
 // 認可処理
 Route::middleware(['auth'])->group(function () {
