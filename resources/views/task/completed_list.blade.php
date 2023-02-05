@@ -28,7 +28,7 @@
  現在 {{ $completed_list->currentPage() }} ページ目<br>
  
          @if ($completed_list->onFirstPage() === false)
-        <a href="/task/list">最初のページ</a>
+        <a href="/completed_tasks/list">最初のページ</a>
         @else
         最初のページ
         @endif
