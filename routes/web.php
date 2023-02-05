@@ -25,6 +25,10 @@ use App\Http\Controllers\Admin\UserController as AdminUserController;
 // タスク管理システム
 Route::get('/', [AuthController::class, 'index'])->name('front.index');
 Route::post('/login', [AuthController::class, 'login']);
+
+// 会員登録（★これを追加）
+Route::get('/user/register', [UserController::class, 'index']);
+
 // 認可処理
 Route::middleware(['auth'])->group(function () {
     Route::prefix('/task')->group(function () {
@@ -40,8 +44,6 @@ Route::middleware(['auth'])->group(function () {
     //
     Route::get('/logout', [AuthController::class, 'logout']);
     Route::get('/completed_tasks/list', [CompletedTaskController::class, 'list']);
-    Route::post('/user/register', [UserController::class, 'register']);
-    Route::get('/user/index', [UserController::class, 'index']);
 });
 
 

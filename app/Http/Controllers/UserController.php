@@ -66,7 +66,7 @@ class UserController extends Controller
                          ->get();
 //echo "<pre>\n";
 //var_dump($list->toArray()); exit;
-        return view('user.list', ['users' => $list]);
+        return view('user.register');
     }
 
 }
